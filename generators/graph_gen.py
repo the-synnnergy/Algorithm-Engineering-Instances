@@ -35,9 +35,9 @@ def networkx_graph_to_ae_format(graph : nx.Graph,instance_id,top_nodes):
     file.close()
 for i in range(20):
     instance_id = "Instanz_" + str(i)
-    prob = random()/5.0
+    prob = random()/10.0
     instance_id = instance_id +"_prob_" +str(prob)
-    nodes = randrange(100,10000,1)
+    nodes = randrange(100,100000,1)
     instance_id = instance_id +"_nodes_" +str(nodes)
     graph = nx.scale_free_graph(nodes)
     networkx_graph_to_ae_format(graph,instance_id,prob)
